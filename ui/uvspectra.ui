@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>993</width>
-    <height>661</height>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -92,6 +92,23 @@
        </widget>
       </item>
       <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="show_gaussian">
+        <property name="text">
+         <string>Show gaussians</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -132,7 +149,14 @@
     <addaction name="separator"/>
     <addaction name="actionClose"/>
    </widget>
+   <widget class="QMenu" name="menuExperimental">
+    <property name="title">
+     <string>Experimental</string>
+    </property>
+    <addaction name="add_experiment_data"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuExperimental"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen_Output">
@@ -143,6 +167,11 @@
   <action name="actionClose">
    <property name="text">
     <string>Close</string>
+   </property>
+  </action>
+  <action name="add_experiment_data">
+   <property name="text">
+    <string>Add experiment data</string>
    </property>
   </action>
  </widget>
