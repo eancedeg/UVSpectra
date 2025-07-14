@@ -81,6 +81,7 @@ class UVSpectraMainGUI(QMainWindow):
                 self.experimental = pd.read_excel(filename)
                 self.ax.clear()
                 self.ax.set_ylabel('Absorbance', color='black')
+                self.ax.set_xlabel('Wavelength (nm)')
                 self.ax.tick_params(axis='y', labelcolor='black')
 
                 wavelengths = self.experimental.iloc[:, 0]
@@ -200,8 +201,7 @@ class UVSpectraMainGUI(QMainWindow):
                 if orb[2] > 0.1:
 
                     transdata.append((osc + 1,
-                                      f'{self.orbital_name(orb[0][0], homo)} \u27F6 {self.orbital_name(orb[1][0], 
-                                                                                                       homo)}',
+                                      f'{self.orbital_name(orb[0][0], homo)} \u27F6 {self.orbital_name(orb[1][0], homo)}',
                                       self.data.f[osc], round(orb[2] * 100, 2), round(energies[osc], 1)))
 
         self.ui.transitiontable.setRowCount(len(transdata))
