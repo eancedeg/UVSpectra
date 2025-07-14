@@ -1,0 +1,15 @@
+name: comp
+channels:
+  - defaults
+dependencies:
+  - matplotlib=3.10.0=py310h06a4308_0
+  - openpyxl=3.1.5=py310h5eee18b_1
+  - pandas=2.2.3=py310h6a678d5_0
+  - pyqt=5.15.10=py310h6a678d5_1
+  - python=3.10.18=h1a3bd86_0
+  - pip:
+      - cclib==1.8.1
+      - numpy==2.2.6
+      - periodictable==2.0.2
+      - pyqt5-stubs==5.15.6.0
+      - scipy==1.15.3
